@@ -3,8 +3,23 @@ body {
 	background: #E5E4E2;
 }
 
+#row2 {
+	margin-top: 15px;
+}
+
 .page-header {
 	padding-left: 65px;
+}
+
+.gifButton {
+	background: lightgreen;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.gifButton:hover {
+	font-size: 1.5em;
+	background: lightgreen;
 }
 
 
