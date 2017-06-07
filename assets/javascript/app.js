@@ -26,9 +26,10 @@ gifButtons = function() {
       }
 }
 
-newGifButton = function(userInput) {
-	userInput = $("#exampleInputText1").text();
-	alert(userinput);
+newGifButton = function() {
+	userInput = $("#exampleInputText1").val();
+	alert(userInput);
+	userInput.push(gifs);
 }
 
 
@@ -41,8 +42,12 @@ gifButtons();
 
 // this click function will put the user inout into the gif array
 $("#gifSubmit").on("click", function() {
-        console.log("test");
         newGifButton();
+        gifButtons();
+      });
+
+$("#gifButtonLibrary").on("click", function() {
+		alert(gifBtn[i]);
       });
 
 

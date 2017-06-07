@@ -1,6 +1,7 @@
 
 body {
 	background: #E5E4E2;
+	font-family: 'Roboto Mono', monospace;
 }
 
 #row2 {
@@ -8,20 +9,26 @@ body {
 }
 
 .page-header {
-	padding-left: 65px;
+	padding-left: 85px;
 }
 
 .gifButton {
 	background: lightgreen;
+	border: 1px solid green;
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
 
 .gifButton:hover {
 	font-size: 1.5em;
+	font-weight: bold;
 	background: lightgreen;
+	border: 1px solid green;
 }
 
+#gifSubmit {
+	border: 1px solid green;
+}
 
 #footer {
 	text-align: center;
