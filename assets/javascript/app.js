@@ -6,15 +6,16 @@ var userInput;
 
 var gifs = ["will ferrell", "family guy", "batman", "pandas", 
 			"bruce lee", "dogeball", "anchorman", "finger guns", 
-			"falling", "table flip" ];
+			"falling", "table flip", ];
 
-
+var selectedGif = "";
 
 
 
 // Functions
 //------------------------------------------------------------------------------
 
+// adds buttons for gifs array
 gifButtons = function() {
 	for (i=0; i<gifs.length; i++) {
         // console.log(letters[i]);
@@ -28,8 +29,15 @@ gifButtons = function() {
 
 newGifButton = function() {
 	userInput = $("#exampleInputText1").val();
-	alert(userInput);
-	userInput.push(gifs);
+	console.log(userInput);
+	String(userInput);
+	gifs.push(userInput);
+	// gifButtons();
+}
+
+gifSet = function(selectedGif) {
+	selectedGif = gifs[i];
+	alert(selectedGif);
 }
 
 
@@ -40,16 +48,24 @@ newGifButton = function() {
 
 gifButtons();
 
+
 // this click function will put the user inout into the gif array
-$("#gifSubmit").on("click", function() {
-        newGifButton();
-        gifButtons();
+// $("#gifSubmit").on("click", function() {
+//         newGifButton();
+//         gifButtons();
+//       });
+
+$("#gifSubmit").click(function() {
+		// gifButtons();
+        newGifButton(); 
       });
 
-$("#gifButtonLibrary").on("click", function() {
-		alert(gifBtn[i]);
+
+$("#gifButtonLibrary").on("click", function(event) {
+		gifSet(event.curentTarget);
       });
 
+console.log(gifs);
 
 
 });
