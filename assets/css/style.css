@@ -14,12 +14,13 @@ body {
 
 .gifButton {
 	background: lightgreen;
+	color: #000000;
 	border: 1px solid green;
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
 
-.gifButton:hover {
+.gifButton:active {
 	font-size: 1.5em;
 	font-weight: bold;
 	background: lightgreen;
