@@ -25,7 +25,11 @@ gifButtons = function() {
         gifBtn.text(gifs[i]);
         $("#gifButtonLibrary").append(gifBtn);
       }
+}
 
+alertGifName = function() {
+	var gifName = $(this).attr("giphy");
+	alert(gifName);
 }
 
 
@@ -43,6 +47,8 @@ $("#gifSubmit").on("click", function(event) {
         gifButtons();
         $("#inputForm").children("input").val("");
       });
+
+$(document).on("click", ".gifButton", alertGifName);
 
 gifButtons();
 
