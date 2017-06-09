@@ -27,9 +27,23 @@ gifButtons = function() {
       }
 }
 
-alertGifName = function() {
+// function to display gifs using giphy API
+displayGifs = function () {
+
 	var gifName = $(this).attr("giphy");
-	alert(gifName);
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC";
+
+	$.ajax({
+		url: queryURL,
+		method: "GET",
+
+	}).done(function(response) {
+		// $("#gifDisplay").append(JSON.stringify(response));
+		$("#gifDisplay").text(response.data[0].url);
+
+	});
+
+
 }
 
 
@@ -48,7 +62,8 @@ $("#gifSubmit").on("click", function(event) {
         $("#inputForm").children("input").val("");
       });
 
-$(document).on("click", ".gifButton", alertGifName);
+// click function for gif buttons, displays gifs
+$(document).on("click", ".gifButton", displayGifs);
 
 gifButtons();
 
