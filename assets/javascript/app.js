@@ -39,13 +39,12 @@ displayGifs = function () {
 
 	}).done(function(response) {
 		// $("#gifDisplay").append(JSON.stringify(response));
-		$("#gifDisplay").text(response.data[0].url);
+		$("#gifDisplay").text(response.data[0].embed_url);
+		$("#gifDisplay").append("<img src="+response.data[0].embed_url+"alt='gifImage'></img>");
 
 	});
 
-
 }
-
 
 
 // Main Process
