@@ -8,7 +8,7 @@ var gifs = ["will ferrell", "family guy", "batman", "pandas",
 			"falling", "table flip", "facepalm", "highfive", "shrek",
 			"wink", "crying", "slow motion", "hedgehog", "canada",
 			"grand theft auto", "fail", "funny", "laughing", "samuel l jackson",
-			"pulp fiction"  ];
+			"pulp fiction", "ted"  ];
 
 
 
