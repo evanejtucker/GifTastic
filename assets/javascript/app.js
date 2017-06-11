@@ -33,21 +33,20 @@ displayGifs = function () {
 	var gifName = $(this).attr("giphy");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC&limit=10";
 
-  setTimeout(function () {
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).done(function(response) {
-      $("#gifDisplay").html('');
-      var results = response.data;
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	}).done(function(response) {
+    $("#gifDisplay").html('');
+		var results = response.data;
 
-      for (i=0; i<results.length; i++) {
-        var gifImage = GifDisplay(response.data[i]);
-        $("#gifDisplay").prepend(gifImage);
-      }
+		for (i=0; i<results.length; i++) {
+      var gifImage = GifDisplay(response.data[i]);
+			$("#gifDisplay").prepend(gifImage);
+		}
 
-    });
-  }, 2000);
+	});
+
 }
 
 
