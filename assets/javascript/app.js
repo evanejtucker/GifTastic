@@ -5,7 +5,10 @@ $( document ).ready(function() {
 
 var gifs = ["will ferrell", "family guy", "batman", "pandas", 
 			"bruce lee", "dogeball", "anchorman", "finger guns", 
-			"falling", "table flip", "facepalm" ];
+			"falling", "table flip", "facepalm", "highfive", "shrek",
+			"wink", "crying", "slow motion", "hedgehog", "canada",
+			"grand theft auto", "fail", "funny", "laughing", "samuel l jackson",
+			"pulp fiction"  ];
 
 
 
@@ -23,7 +26,7 @@ gifButtons = function() {
         gifBtn.addClass("btn btn-success gifButton");
         gifBtn.attr("giphy", gifs[i]);
         gifBtn.text(gifs[i]);
-        $("#gifButtonLibrary").append(gifBtn);
+        $("#gifButtonLibrary").append(gifBtn );
       }
 }
 
@@ -52,7 +55,7 @@ displayGifs = function () {
 			gifImage.addClass("gifImage");
 			gifImage.attr("src", pauseGif);
 			$("#gifDisplay").prepend(gifImage);
-			$("gifImage").prepend(rating);
+			$(".gif").prepend(rating);
 
 		}
 		
@@ -81,6 +84,12 @@ $(document).on("click", ".gifButton", displayGifs);
 // click function to play/pause gifs
 $(document).on("click", ".gif", function(){
 	console.log(this);
+	state = $(this).attr("src");
+	if( state === pauseGif) {
+		alert("pasue");
+	} else {
+		alert("not paused");
+	}
 
 });
 

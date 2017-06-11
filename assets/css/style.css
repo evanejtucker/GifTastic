@@ -27,6 +27,10 @@ body {
 	border: 1px solid green;
 }
 
+#gifInput {
+	margin-top: -15px;
+}
+
 #gifSubmit {
 	border: 1px solid green;
 }
