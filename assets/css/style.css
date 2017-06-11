@@ -16,6 +16,7 @@ body {
   display: inline-block;
   margin-left: 20px;
 }
+
 .gifButton {
 	background: lightgreen;
 	color: #000000;
@@ -51,6 +52,8 @@ body {
 }
 
 
+
+/*media queries*/
 @media (min-width: 992px) {
   #gifInput, #gifDisplay {
     float: right;
