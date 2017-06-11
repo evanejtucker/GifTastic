@@ -31,19 +31,24 @@ gifButtons = function() {
 displayGifs = function () {
 
 	var gifName = $(this).attr("giphy");
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC";
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC&limit=10";
+	
 
 	$.ajax({
 		url: queryURL,
 		method: "GET",
 
 	}).done(function(response) {
+		var results = response.data;
 
-		var gifImage = $("<img>");
-		gifImage.addClass("gifImage");
-		gifImage.attr("src", response.data[0].embed_url);
-		$("#gifDisplay").append(gifImage);
-
+		for (i=0; i<results.length; i++) {
+			var workingGif = response.data[i].images.original.url;
+			var gifImage = $("<img>");
+			gifImage.addClass("gifImage");
+			gifImage.attr("src", workingGif);
+			$("#gifDisplay").append(gifImage);
+		}
+		
 	});
 
 }
