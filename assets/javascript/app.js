@@ -42,11 +42,18 @@ displayGifs = function () {
 		var results = response.data;
 
 		for (i=0; i<results.length; i++) {
-			var workingGif = response.data[i].images.original.url;
-			var gifImage = $("<img>");
+			var playGif = response.data[i].images.fixed_height.url;
+			var pauseGif = response.data[i].images.fixed_height_still.url;
+			var gifRating = response.data[i].rating;
+
+			var rating = $("<p>").text("rating: " + gifRating);
+			var gifImage = $("<img class='gif'></img>");
+
 			gifImage.addClass("gifImage");
-			gifImage.attr("src", workingGif);
-			$("#gifDisplay").append(gifImage);
+			gifImage.attr("src", pauseGif);
+			$("#gifDisplay").prepend(gifImage);
+			$("gifImage").prepend(rating);
+
 		}
 		
 	});
@@ -70,6 +77,17 @@ $("#gifSubmit").on("click", function(event) {
 
 // click function for gif buttons, displays gifs
 $(document).on("click", ".gifButton", displayGifs);
+
+$(".gifImage").on("click", function() {
+	console.log(this);
+	// state = $(this).attr("giphy");
+
+	// if (state === "pauseGif") {
+	// 	alert("test");
+	// } else {
+	// 	alert(" didnt work");
+	// }
+});
 
 gifButtons();
 
