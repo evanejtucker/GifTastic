@@ -21,7 +21,7 @@ body {
 }
 
 .gifButton:active {
-	font-size: 1.5em;
+	/*font-size: 1.5em;*/
 	font-weight: bold;
 	background: lightgreen;
 	border: 1px solid green;

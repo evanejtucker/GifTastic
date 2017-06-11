@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 var gifs = ["will ferrell", "family guy", "batman", "pandas", 
 			"bruce lee", "dogeball", "anchorman", "finger guns", 
-			"falling", "table flip", ];
+			"falling", "table flip", "facepalm" ];
 
 
 
@@ -78,16 +78,12 @@ $("#gifSubmit").on("click", function(event) {
 // click function for gif buttons, displays gifs
 $(document).on("click", ".gifButton", displayGifs);
 
-$(".gifImage").on("click", function() {
+// click function to play/pause gifs
+$(document).on("click", ".gif", function(){
 	console.log(this);
-	// state = $(this).attr("giphy");
 
-	// if (state === "pauseGif") {
-	// 	alert("test");
-	// } else {
-	// 	alert(" didnt work");
-	// }
 });
+
 
 gifButtons();
 
