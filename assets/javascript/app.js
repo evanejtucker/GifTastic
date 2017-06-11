@@ -6,7 +6,7 @@ $( document ).ready(function() {
 var gifs = ["will ferrell", "family guy", "batman", "pandas",
 			"bruce lee", "dogeball", "anchorman", "finger guns",
 			"falling", "table flip", "facepalm", "highfive", "shrek",
-			"wink", "crying", "slow motion", "hedgehog", "canada",
+			"wink", "crying", "austin powers", "slow motion", "hedgehog", "canada",
 			"grand theft auto", "fail", "funny", "laughing", "samuel l jackson",
 			"pulp fiction", "ted"  ];
 
@@ -32,7 +32,8 @@ displayGifs = function () {
 
   $("#gifDisplay").html('Loading...');
 	var gifName = $(this).attr("giphy");
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC&rating=pg-r&sort=relevant&limit=15";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC&rating=r&sort=relevant&limit=15";
+	// var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 	$.ajax({
 		url: queryURL,
 		method: "GET"
