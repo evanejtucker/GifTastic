@@ -4,7 +4,7 @@ $( document ).ready(function() {
 //------------------------------------------------------------------------------
 
 var gifs = ["will ferrell", "family guy", "batman", "pandas",
-			"bruce lee", "dogeball", "anchorman", "finger guns",
+			"bruce lee", "dodgeball", "anchorman", "finger guns",
 			"falling", "table flip", "facepalm", "high five", "shrek",
 			"wink", "crying", "austin powers", "slow motion", "hedgehog", "canada",
 			"grand theft auto", "fail", "funny", "laughing", "samuel l jackson",
