@@ -33,7 +33,7 @@ gifButtons = function() {
 displayGifs = function () {
 
   $("#gifDisplay").html('Loading...');
-  	var offset = Math.floor(Math.random()*41);
+  	var offset = Math.floor(Math.random()*51);
 	var gifName = $(this).attr("giphy");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q="+gifName+"&api_key=dc6zaTOxFJmzC&rating=r&sort=relevant&offset="+offset+"&limit=15";
 	// var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
